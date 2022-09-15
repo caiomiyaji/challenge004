@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    /*Font*/
+    --font: 'Red Hat Display', sans-serif;
+
+    /*Primary Colors*/
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    /*Neutral Colors*/
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --purple: #766CF1;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../assets/images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: var(--pale-blue);
+    background-position: top center;
+    background-size: 100% 49%;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+}
+
+main > section{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.card{
+    position: absolute;
+    background-color: white;
+    height: 680px;
+    width: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px 5px hsla(245, 75%, 52%, 0.089);
+}
+
+.card-image{
+    background-image: url("../assets/images/illustration-hero.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    width: 100%;
+    height: 31.5%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.card-content{
+    height: 68.5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    padding-top: 45px;
+    text-align: center;
+}
+
+.card-content h1{
+    font-size: 1.7em;
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.card-content > p{
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--desaturated-blue);
+    line-height: 1.5em;
+    margin-top: 20px;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--very-pale-blue);
+    width: 100%;
+    height: 90px;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 22px;
+}
+
+.plan-type{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: -70px;
+}
+
+.plan-type h2{
+    font-size: 1em;
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+.plan-type p{
+    color: var(--desaturated-blue);
+}
+
+.price a{
+    color: var(--bright-blue);
+    font-weight: 900;
+    font-size: 0.9em;
+}
+
+.price a:hover{
+    color: var(--purple);
+    text-decoration: none;
+}
+
+.proceed-payment{
+    margin-top: 35px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: var(--bright-blue);
+    color: white;
+    font-weight: 900;
+    font-size: 0.9em;
+    box-shadow: 0px 10px 30px 5px hsla(245, 75%, 52%, 0.288);
+}
+
+.proceed-payment:hover{
+    background-color: var(--purple);
+}
+
+.cancel-order{
+    border-style: none;
+    background-color: transparent;
+    font-size: 0.96em;
+    color: var(--desaturated-blue);
+    font-weight: 900;
+}
+
+.cancel-order:hover{
+    color: var(--dark-blue);
+}
+
+
+/*Responsive*/
+
+
+@media screen and (max-width: 500px){
+
+    body{
+        background-image: url("../assets/images/pattern-background-mobile.svg");
+        background-size: 100%;
+    }
+
+    .card{
+        width: 90%;
+        height: 580px;
+    }
+
+    .card-image{
+        height: 28%;
+    }
+
+    .card-content{
+        padding: 25px;
+        padding-top: 30px;
+    }
+
+    .card-content h1{
+        font-size: 1.5em;
+    }
+
+    .card-content > p{
+        margin: 20px 12px;
+    }
+
+    .price{
+        margin-top: 5px;
+        padding: 18px;
+    }
+
+    .plan-type{
+        margin-left: -20px;
+    }
+
+    .proceed-payment{
+        margin-top: 25px;
+        margin-bottom: 23px;
+    }
+}
