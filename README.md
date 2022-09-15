@@ -1,7 +1,6 @@
 # challenge004
-Order summary component
 
-Frontend Mentor challenge003 (Order summary component)
+Frontend Mentor challenge004 (Order summary component)
 
 This is a challenge from Frontend Mentor. This page was built using HTML and CSS (flexbox)
 
